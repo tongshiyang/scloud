@@ -12,6 +12,7 @@
     <artifactId>scloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>scloud</name>
+<!--    <packaging>pom</packaging>-->
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -52,7 +53,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>Brixton.SR7</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

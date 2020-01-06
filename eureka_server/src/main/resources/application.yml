@@ -1,14 +1,21 @@
 server:
-  port: 11000
+  port: 9000
 
+#模拟两个EurekaServer
+#端口9000,8000
+#两个server需要相互注册
+spring:
+  applicatin:
+    name: eureka-server
 eureka:
-  instance:
-    hostname: localhost
+#  instance:
+#    hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+#    registerWithEureka: false
+#    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://127.0.0.1:8000/eureka/
   server:
-    enable-self-preservation: false #���ұ�������
-    eviction-interval-timer-in-ms: 30000  #��ʱ�߳��ѹ�ͣ�Ľڵ�
+    enable-self-preservation: false #自我保护机制
+    eviction-interval-timer-in-ms: 30000  #及时踢出已关停的节点
